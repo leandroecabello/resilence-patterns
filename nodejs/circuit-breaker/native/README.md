@@ -33,3 +33,26 @@ Este ejemplo consulta una API inestable (`/unstable-endpoint`) provista por un s
 npm install
 npm run dev
 ```
+
+### 2. Ejecutar el circuito
+```bash
+cd nodejs/circuit-breaker/native
+npm install
+node index.js
+```
+
+Verás mensajes como:
+
+```javascript
+✅ All good
+❌ Error: Request failed with status code 500
+🔴 Circuito ABIERTO
+🟢 Circuito CERRADO
+```
+
+## 📁 Archivos clave
+- `index.js`: lógica principal del circuito
+- `external-api`: API mock que simula fallos
+
+## ✍️ Otros ejemplos
+En este repositorio también encontrarás implementaciones con NestJS y otros lenguajes para comparar cómo se aplica el patrón en distintos entornos.
