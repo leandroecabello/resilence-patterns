@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  external-api:
+    build:
+      context: ./mock-services/external-api
+    ports:
+      - "${EXTERNAL_API_PORT:-3001}:3000"
